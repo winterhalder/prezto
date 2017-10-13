@@ -31,6 +31,7 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
+  'docker' \
   'completion' \
   'osx' \
   'git' \
@@ -119,6 +120,10 @@ zstyle ':prezto:module:prompt' theme 'garrett'
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
 # for longer or 'full' (with '~' expansion) for even longer prompt display.
 # zstyle ':prezto:module:prompt' pwd-length 'short'
+
+# Set the prompt to display the return code along with an indicator for non-zero
+# return codes. This is not supported by all prompts.
+zstyle ':prezto:module:prompt' show-return-val 'yes'
 
 #
 # Ruby
