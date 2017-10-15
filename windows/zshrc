@@ -1,0 +1,31 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# Iterm shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Custom aliases
+alias updatezprezto='git pull & git submodule update --init --recursive'
+
+alias keys='cd /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys'
+alias prodsm1='ssh -A ec2-user@ec2-52-90-241-143.compute-1.amazonaws.com'
+alias prodsm2='ssh -A ec2-user@ec2-52-55-14-24.compute-1.amazonaws.com'
+alias intsm2='ssh -A ec2-user@ec2-52-32-168-105.us-west-2.compute.amazonaws.com'
+alias intsm1='ssh -A ec2-user@ec2-52-10-202-5.us-west-2.compute.amazonaws.com'
+
+echo Re-registering ssh keys...
+ssh-add -K ~/.ssh/id_rsa 2>/dev/null
+ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhkey2013.pem 2>/dev/null
+ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhkeyOregon.pem 2>/dev/null
+ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhNorthCalifKey.pem 2>/dev/null
