@@ -67,14 +67,6 @@ This file is sourced by login shells during logout. It should be used for
 displaying messages and the deletion of files.
 
 
-Installing the files (PaulW Custom)
-
-ln -s ~/.zprezto/custom/zlogin ~/.zlogin
-ln -s ~/.zprezto/custom/zlogout ~/.zlogout
-ln -s ~/.zprezto/custom/zpreztorc ~/.zpreztorc
-ln -s ~/.zprezto/custom/zprofile ~/.zprofile
-ln -s ~/.zprezto/custom/zshenv ~/.zshenv
-ln -s ~/.zprezto/custom/zshrc ~/.zshrc
 
 
 Authors
