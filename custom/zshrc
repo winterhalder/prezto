@@ -29,3 +29,8 @@ ssh-add -K ~/.ssh/id_rsa 2>/dev/null
 ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhkey2013.pem 2>/dev/null
 ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhkeyOregon.pem 2>/dev/null
 ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhNorthCalifKey.pem 2>/dev/null
+
+tt () {
+    DISABLE_AUTO_TITLE="true"
+    echo -e "\033];$@\007"
+}

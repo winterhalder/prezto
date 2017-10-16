@@ -13,6 +13,6 @@ rm ~/.zlogin ~/.zlogout ~/.zpreztorc ~/.zprofile ~/.zshenv ~/.zshrc
 Then run this to set up the new files
 
 setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/custom/^*.md(.N); do
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/linux/^*.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
