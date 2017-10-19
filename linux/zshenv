@@ -10,14 +10,8 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# Important paths...
-# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-# export PATH=~/bin:/usr/local/bin:/usr/local/Cellar/mongodb@3.0/3.0.12/bin:/Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/Development/database:/Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/Development/scripts:$PATH
-
-# export GOROOT=/usr/local/opt/go/libexec
-# export GOPATH=~/bitHeads/Projects/statsims/go-workspace
-
-# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/boxfuse
+# Customize paths
+export PATH="$HOME/database:$PATH"
 
 # For rbenv
 # export PATH="$HOME/.rbenv/bin:$PATH"
