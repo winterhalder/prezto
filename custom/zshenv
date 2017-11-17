@@ -12,7 +12,7 @@ fi
 
 # Important paths...
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export PATH=~/bin:/usr/local/bin:/usr/local/Cellar/mongodb@3.0/3.0.12/bin:/Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/Development/database:/Users/winterhalder/bitHeads/Projects/brainCloud/bc-tools:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/Cellar/mongodb@3.0/3.0.12/bin:/Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/Development/database:$PATH
 
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=~/bitHeads/Projects/statsims/go-workspace
@@ -22,3 +22,8 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/boxfuse
 # For rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Set up brainCloud environment
+export BCSERVERDIR=~/bitheads/projects/braincloud/braincloud-server
+export BCTOOLSDIR=~/bitheads/projects/braincloud/bc-tools
+export PATH=$BCTOOLSDIR:$PATH

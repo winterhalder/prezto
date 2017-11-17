@@ -23,9 +23,8 @@ alias prodsm1='ssh -A ec2-user@ec2-52-90-241-143.compute-1.amazonaws.com'
 alias prodsm2='ssh -A ec2-user@ec2-52-55-14-24.compute-1.amazonaws.com'
 alias intsm2='ssh -A ec2-user@ec2-52-32-168-105.us-west-2.compute.amazonaws.com'
 alias intsm1='ssh -A ec2-user@ec2-52-10-202-5.us-west-2.compute.amazonaws.com'
-alias bcd='/users/winterhalder/bitheads/projects/braincloud/bc-tools/bc-docker.sh'
-alias bct='cd /Users/winterhalder/bitheads/Projects/brainCloud/bc-tools'
-alias bctu='/users/winterhalder/bitheads/projects/brainCloud/braincloud-server/Development/Scripts/bc-tools-update.sh'
+
+. $BCTOOLSDIR/bc-aliases.sh
 
 echo Re-registering ssh keys...
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null
