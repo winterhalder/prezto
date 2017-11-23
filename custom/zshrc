@@ -26,6 +26,10 @@ alias intsm1='ssh -A ec2-user@ec2-52-10-202-5.us-west-2.compute.amazonaws.com'
 alias simengine1='ssh -A ec2-user@ec2-54-215-251-105.us-west-1.compute.amazonaws.com'
 alias simengine2='ssh -A ec2-user@ec2-13-57-16-116.us-west-1.compute.amazonaws.com'
 
+dkEnv() {
+    eval $(docker-machine env $1)
+}
+
 . $BCTOOLSDIR/bc-aliases.sh
 
 echo Re-registering ssh keys...
