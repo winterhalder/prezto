@@ -19,13 +19,19 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 alias updatezprezto='git pull & git submodule update --init --recursive'
 
 alias keys='cd /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys'
-alias prodsm1='ssh -A ec2-user@ec2-52-90-241-143.compute-1.amazonaws.com'
-alias prodsm2='ssh -A ec2-user@ec2-52-55-14-24.compute-1.amazonaws.com'
+
+# brainCloud
+alias prodsm1='ssh -A ec2-user@ec2-35-171-2-145.compute-1.amazonaws.com'
+alias prodsm2='ssh -A ec2-user@ec2-52-91-81-41.compute-1.amazonaws.com'
 alias intsm2='ssh -A ec2-user@ec2-52-32-168-105.us-west-2.compute.amazonaws.com'
 alias intsm1='ssh -A ec2-user@ec2-52-10-202-5.us-west-2.compute.amazonaws.com'
-alias simengine2='ssh -A ec2-user@ec2-13-57-16-116.us-west-1.compute.amazonaws.com'
 alias emptydb='ssh -A ec2-user@emptydb.braincloudservers.com'
+
+# bitHead infrastructure
 alias jenkins='ssh buildmaster@207.181.118.33'
+
+# customer servers
+alias simengine2='ssh -A ec2-user@ec2-13-57-16-116.us-west-1.compute.amazonaws.com'
 
 
 dkEnv() {
