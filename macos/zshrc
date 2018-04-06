@@ -10,22 +10,24 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-
 # Iterm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Custom aliases
+# Update this (I guess?)
 alias updatezprezto='git pull & git submodule update --init --recursive'
 
-alias keys='cd /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys'
-alias prodsm1='ssh -A ec2-user@ec2-52-90-241-143.compute-1.amazonaws.com'
-alias prodsm2='ssh -A ec2-user@ec2-52-55-14-24.compute-1.amazonaws.com'
-alias intsm2='ssh -A ec2-user@ec2-52-32-168-105.us-west-2.compute.amazonaws.com'
-alias intsm1='ssh -A ec2-user@ec2-52-10-202-5.us-west-2.compute.amazonaws.com'
+# brainCloud aliases
+#. $BCTOOLSDIR/bc-aliases.sh
+test -e "${BCTOOLSDIR}/bc-aliases.sh" && source "${BCTOOLSDIR}/bc-aliases.sh"
 
-echo Re-registering ssh keys...
-ssh-add -K ~/.ssh/id_rsa 2>/dev/null
-ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhkey2013.pem 2>/dev/null
-ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhkeyOregon.pem 2>/dev/null
-ssh-add -K /Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/References/keys/bhNorthCalifKey.pem 2>/dev/null
+# My custom aliases
+test -e "${HOME}/Dropbox/System/zsh/.phw-aliases.sh" && source "${HOME}/Dropbox/System/zsh/.phw-aliases.sh"
+
+dkEnv() {
+    eval $(docker-machine env $1)
+}
+
+tt () {
+    DISABLE_AUTO_TITLE="true"
+    echo -e "\033];$@\007"
+}
