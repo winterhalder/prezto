@@ -33,6 +33,8 @@ alias jenkins='ssh buildmaster@207.181.118.33'
 # customer servers
 alias simengine2='ssh -A ec2-user@ec2-13-57-16-116.us-west-1.compute.amazonaws.com'
 
+# ssh to home
+alias darkmac='ssh -p 22 winterhalder@DarkMac.38605281.members.btmm.icloud.com'
 
 dkEnv() {
     eval $(docker-machine env $1)
