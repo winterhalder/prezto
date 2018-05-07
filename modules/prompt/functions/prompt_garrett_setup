@@ -275,7 +275,11 @@ function prompt_garrett_setup {
 
     # Set style.
     eval prompt_garrett_user='%S${prompt_garrett_color_user}%n%s'
-    eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
+    if [[ "$NAMETAG" != "" ]]; then
+        eval prompt_garrett_host='${prompt_garrett_color_host}${NAMETAG}' # Use the AWS name tag if defined
+    else
+        eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
+    fi
     eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
 
   # On SSH.
@@ -288,7 +292,11 @@ function prompt_garrett_setup {
 
     # Set style.
     eval prompt_garrett_user='%S${prompt_garrett_color_user}%n%s'
-    eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
+    if [[ "$NAMETAG" != "" ]]; then
+        eval prompt_garrett_host='${prompt_garrett_color_host}${NAMETAG}' # Use the AWS name tag if defined
+    else
+        eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
+    fi
     eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
 
   # Normal user.
@@ -301,7 +309,11 @@ function prompt_garrett_setup {
 
     # Set style.
     eval prompt_garrett_user=''
-    eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
+    if [[ "$NAMETAG" != "" ]]; then
+        eval prompt_garrett_host='${prompt_garrett_color_host}${NAMETAG}' # Use the AWS name tag if defined
+    else
+        eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
+    fi
     eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
   fi
 
@@ -471,4 +483,3 @@ ${prompt_garrett_color_prompt}Correct ${red}%R${prompt_garrett_color_prompt} to 
 }
 
 prompt_garrett_setup "$@"
-
