@@ -5,6 +5,11 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# Get the AWS instance name if available (needs to be before initializing prezto)
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/linux/awsutils/instance-name-tag.sh" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zprezto/linux/awsutils/instance-name-tag.sh"
+fi
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
