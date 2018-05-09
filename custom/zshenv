@@ -14,8 +14,10 @@ fi
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH=~/bin:/usr/local/bin:/usr/local/Cellar/mongodb@3.0/3.0.12/bin:/Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/Development/database:$PATH
 
+
 export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=~/bitHeads/Projects/statsims/go-workspace
+#export GOPATH=~/bitHeads/Projects/statsims/go-workspace
+export GOPATH=~/bitheads/Projects/go-workspace
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/boxfuse
 
