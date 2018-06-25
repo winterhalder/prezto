@@ -31,3 +31,8 @@ tt () {
     DISABLE_AUTO_TITLE="true"
     echo -e "\033];$@\007"
 }
+
+# Load rbenv automatically by appending
+# the following to ~/.zshrc:
+
+eval "$(rbenv init -)"
