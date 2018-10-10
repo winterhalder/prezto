@@ -36,3 +36,13 @@ tt () {
 # the following to ~/.zshrc:
 
 eval "$(rbenv init -)"
+
+# Source JENV to control JAVA environment. Be careful, this seems to clear JAVA_HOME
+# Which is why we explicitely set it again shortly afterwards...
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+#echo $PATH
+
+# Set JAVA_HOME vased on jenv
+export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
+alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
