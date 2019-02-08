@@ -10,11 +10,12 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export PATH=~/bin:/usr/local/bin:/usr/local/opt/mongodb@3.2/bin:/Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/Development/database:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/opt/mongodb@3.6/bin:/Users/winterhalder/bitHeads/Projects/brainCloud/braincloud-server/Development/database:$PATH
 
 export GOROOT=/usr/local/opt/go/libexec
 #export GOPATH=~/bitHeads/Projects/statsims/go-workspace
 export GOPATH=~/bitheads/Projects/go-workspace
+export GOBIN=$GOPATH/bin
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/boxfuse
 
