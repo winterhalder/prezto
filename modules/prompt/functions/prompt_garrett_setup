@@ -275,8 +275,8 @@ function prompt_garrett_setup {
 
     # Set style.
     eval prompt_garrett_user='%S${prompt_garrett_color_user}%n%s'
-    if [[ "$NAMETAG" != "" ]]; then
-        eval prompt_garrett_host='${prompt_garrett_color_host}${NAMETAG}' # Use the AWS name tag if defined
+    if [[ "$NAMETAG" != "" ] && [ "$NAMETAG" != "UNKNOWN"]]; then
+        eval prompt_garrett_host='${prompt_garrett_color_host}%m (${NAMETAG})' # Use the AWS name tag if defined
     else
         eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
     fi
