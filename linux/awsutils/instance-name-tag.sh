@@ -35,7 +35,7 @@ if [ "$TEST" != "" ]; then
 
 else
 
-    export NAMETAG="$AWS_INSTANCE_ID"
-    #export $NAMETAG
+    #export NAMETAG="$AWS_INSTANCE_ID"
+    export $NAMETAG=""
     echo $NAMETAG
 fi
