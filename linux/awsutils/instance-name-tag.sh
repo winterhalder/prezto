@@ -10,7 +10,7 @@
 
 JQ=$(which jq)
 if [ ! -x "$JQ" ]; then
-    echo "jq is not installed. Install it and configure aws to display instance id and name."
+    #echo "jq is not installed. Install it and configure aws to display instance id and name."
     exit 1
 fi
 
@@ -31,11 +31,11 @@ if [ "$TEST" != "" ]; then
     export NAMETAG=$(aws ec2 describe-tags --filters Name=resource-id,Values=$AWS_INSTANCE_ID Name=key,Values=Name|jq ".Tags[0].Value"|tr -d '"')
     #export PS1="\\t [\\u@${NAMETAG} \\W]\\\$ "
     #export $NAMETAG
-    echo $NAMETAG
+    #echo $NAMETAG
 
 else
 
     #export NAMETAG="$AWS_INSTANCE_ID"
-    export $NAMETAG=""
-    echo $NAMETAG
+    export NAMETAG=""
+    #echo $NAMETAG
 fi
