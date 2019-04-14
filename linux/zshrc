@@ -22,3 +22,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Custom aliases
 alias updatezprezto='git pull & git submodule update --init --recursive'
+
+# Configure bc-tools
+if [ -d ~/bc-tools ]; then
+  export BCTOOLSDIR=~/bc-tools
+  . $BCTOOLSDIR/_bc-set-env.sh
+  ~/bc-tools/bc-safe-ops.sh info
+fi
