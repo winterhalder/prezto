@@ -1,13 +1,14 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
+# Customized for braincloud deployment servers
 #
 
-# Get the AWS instance name if available (needs to be before initializing prezto)
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/linux/awsutils/instance-name-tag.sh" ]]; then
-    source "${ZDOTDIR:-$HOME}/.zprezto/linux/awsutils/instance-name-tag.sh"
+# Configure bc-tools. Add to .bashrc or .zshrc (before sourcing of Prezto)
+if [ -d ~/bc-tools ]; then
+  export BCTOOLSDIR=~/bc-tools
+  . $BCTOOLSDIR/_bc-set-env.sh
+  ~/bc-tools/bc-safe-ops.sh info # Only for deployment boxes. Comment or remove this line if its your workstation
 fi
 
 # Source Prezto.
@@ -15,17 +16,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-
 # Iterm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Custom aliases
 alias updatezprezto='git pull & git submodule update --init --recursive'
 
-# Configure bc-tools
-if [ -d ~/bc-tools ]; then
-  export BCTOOLSDIR=~/bc-tools
-  . $BCTOOLSDIR/_bc-set-env.sh
-  ~/bc-tools/bc-safe-ops.sh info
-fi
+# Customize to your needs...
+
