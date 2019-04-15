@@ -20,7 +20,7 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Custom aliases
-alias updatezprezto='git pull & git submodule update --init --recursive'
+alias updatezprezto='cd ~/.zprezto; git pull & git submodule update --init --recursive'
 
 # Customize to your needs...
 
