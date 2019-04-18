@@ -32,6 +32,20 @@ tt () {
     echo -e "\033];$@\007"
 }
 
+# For Roger - to quickly (and completely) switch prompts. (Temporary)
+changeprompt() {
+  prompt $1
+  setopt prompt_subst
+  echo ""
+  echo "vvv This is $1 vvv"
+}
+
+revertprompt() {
+  prompt garrett
+  setopt prompt_subst
+  echo "Ah.... back to garrett"
+}
+
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
 

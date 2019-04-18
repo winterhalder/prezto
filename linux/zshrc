@@ -22,5 +22,19 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Custom aliases
 alias updatezprezto='cd ~/.zprezto; git pull & git submodule update --init --recursive'
 
+# For Roger - to quickly (and completely) switch prompts. (Temporary)
+changeprompt() {
+  prompt $1
+  setopt prompt_subst
+  echo ""
+  echo "vvv This is $1 vvv"
+}
+
+revertprompt() {
+  prompt garrett
+  setopt prompt_subst
+  echo "Ah.... back to garrett"
+}
+
 # Customize to your needs...
 
