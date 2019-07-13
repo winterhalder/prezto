@@ -21,3 +21,5 @@ if (( $+commands[fortune] )); then
     print
   fi
 fi
+
+echo "Using zsh. Use 'changeprompt <steeef|garrett>' to switch prompts."
