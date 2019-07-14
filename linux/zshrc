@@ -6,18 +6,18 @@
 
 # Configure bc-tools. Add to .bashrc or .zshrc (before sourcing of Prezto)
 if [[ "$BCTOOLSDIR" == "" ]]; then
-    if [ -d ~/bc-tools ]; then
-      export BCTOOLSDIR=~/bc-tools
-    else
-      if [ -d /usr/local/bc-tools ]; then
-        export BCTOOLSDIR=/usr/local/bc-tools
-      fi
+  if [ -d ~/bc-tools ]; then
+    export BCTOOLSDIR=~/bc-tools
+  else
+    if [ -d /usr/local/bc-tools ]; then
+      export BCTOOLSDIR=/usr/local/bc-tools
     fi
+  fi
 
-    if [[ "$BCTOOLSDIR" != "" ]]; then
-      . $BCTOOLSDIR/_bc-set-env.sh
-      $BCTOOLSDIR/bc-safe-ops.sh info # Only for deployment boxes. Comment or remove this line if its your workstation
-    fi
+  if [[ "$BCTOOLSDIR" != "" ]]; then
+    . $BCTOOLSDIR/_bc-set-env.sh
+    $BCTOOLSDIR/bc-safe-ops.sh info # Only for deployment boxes. Comment or remove this line if its your workstation
+  fi
 fi
 
 # Source Prezto.
