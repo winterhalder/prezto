@@ -18,6 +18,9 @@ if [[ "$BCTOOLSDIR" == "" ]]; then
     . $BCTOOLSDIR/_bc-set-env.sh
     $BCTOOLSDIR/bc-safe-ops.sh info # Only for deployment boxes. Comment or remove this line if its your workstation
   fi
+else
+  # Always re-apply the aliases - they won't be inherited from another shell (not sure why)
+  . $BCTOOLSDIR/bc-aliases.sh
 fi
 
 # Source Prezto.
