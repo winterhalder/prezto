@@ -48,4 +48,7 @@ revertprompt() {
   echo "Ah.... back to garrett"
 }
 
+# Placing this here instead of zlogin, cause on some systems we have to manually switch to zsh
+echo "Using zsh. Use 'changeprompt <steeef|garrett>' to switch prompts."
+
 # Customize to your needs...
