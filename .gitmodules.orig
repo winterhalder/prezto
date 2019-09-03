@@ -28,10 +28,12 @@
 [submodule "modules/prompt/external/powerlevel9k"]
 	path = modules/prompt/external/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
-[submodule "modules/prompt/external/powerlevel10k"]
-	path = modules/prompt/external/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k.git
+<<<<<<< HEAD
 [submodule "modules/prompt/external/garrett"]
 	path = modules/prompt/external/garrett
 	url = https://github.com/chauncey-garrett/zsh-prompt-garrett.git
-
+=======
+[submodule "modules/prompt/external/powerlevel10k"]
+	path = modules/prompt/external/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+>>>>>>> 8914274ca9f7b997d4a1663e0f290c691772db7f
