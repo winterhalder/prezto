@@ -231,6 +231,10 @@ function prompt_garrett_setup {
   add-zsh-hook precmd prompt_garrett_precmd
   add-zsh-hook chpwd prompt_garrett_chpwd
 
+  # Tell prezto we can manage this prompt
+  zstyle ':prezto:module:prompt' managed 'yes'
+
+
   #
   # Colors
   #
@@ -485,3 +489,4 @@ ${prompt_garrett_color_prompt}Correct ${red}%R${prompt_garrett_color_prompt} to 
 }
 
 prompt_garrett_setup "$@"
+# vim: ft=zsh
