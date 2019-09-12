@@ -25,3 +25,4 @@ export BCTOOLSDIR=~/bitheads/projects/braincloud/bc-tools
 
 # Configure bc-tools source directory (optional - devs only)
 export BCSERVERDIR=~/bitheads/projects/braincloud/braincloud-server
+export BCDEPLOYSETTINGSDIR=~/bitheads/projects/braincloud/braincloud-deploy
