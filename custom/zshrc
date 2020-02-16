@@ -85,3 +85,7 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 # don't add commands that start with space to history
 setopt HIST_IGNORE_SPACE
+
+# Command-not-found integration - must tap brew to install
+# brew tap homebrew/command-not-found
+if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi

@@ -32,12 +32,15 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'gnu-utility' \
   'utility' \
+  'command-not-found' \
   'docker' \
   'homebrew' \
   'completion' \
+  'fasd' \
   'osx' \
   'git' \
   'syntax-highlighting' \
+  'autosuggestions' \
   'history-substring-search' \
   'prompt'
 #
