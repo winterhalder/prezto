@@ -75,3 +75,6 @@ if [ -f '/Users/winterhalder/google-cloud-sdk/completion.zsh.inc' ]; then . '/Us
 
 # add kubectl autocomplete permanently to your zsh shell
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+# don't add commands that start with space to history
+setopt HIST_IGNORE_SPACE
